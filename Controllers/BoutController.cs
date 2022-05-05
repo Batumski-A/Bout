@@ -28,6 +28,8 @@ namespace Bout_2.Controllers
             newBout.CovidVaccineNeed = CovidVaccineNeed;
             newBout.MaxWeightPerPessenger = MaxWeightPerPessenger;
             newBout.NumberOfSeats = NumberOfSeats;
+            newBout.Pessengers = "";
+            newBout.Status = boutStatus;
             _context.Bouts.Add(newBout);
             _context.SaveChanges();
             return Task.FromResult(newBout);
