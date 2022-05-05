@@ -84,11 +84,3 @@ jobs:
           publish-profile: ${{ secrets.BOUT_PUBLISH_PROFIL }}
           package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
       
-      - name: Azure SQL Deploy
-        uses: Azure/sql-action@v1.2
-        with:
-          # Name of the Azure SQL Server name, like Fabrikam.database.windows.net.
-          server-name: 'bout.database.windows.net'
-          # The connection string, including authentication information, for the Azure SQL Server database.
-          connection-string: 'Server=tcp:bout.database.windows.net,1433;Initial Catalog=Bout;Persist Security Info=False;User ID=Bout;Password=1qaz!QAZ;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;'
-
