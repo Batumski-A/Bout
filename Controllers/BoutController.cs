@@ -21,15 +21,13 @@ namespace Bout_2.Controllers
             return Task.FromResult(bouts);
         }
         [HttpPost("/Add")]
-        public Task<Bout> AddBout(Bout bout)
+        public Task<Bout> AddBout(string name,string boutStatus,bool CovidVaccineNeed,int MaxWeightPerPessenger,int NumberOfSeats)
         {
             Bout newBout = new Bout();
-            newBout.Id = bout.Id;
-            newBout.Name = bout.Name;
-            newBout.CovidVaccineNeed = bout.CovidVaccineNeed;
-            newBout.MaxWeightPerPessenger = bout.MaxWeightPerPessenger;
-            newBout.Pessengers = bout.Pessengers;
-            newBout.NumberOfSeats = bout.NumberOfSeats;
+            newBout.Name = name;
+            newBout.CovidVaccineNeed = CovidVaccineNeed;
+            newBout.MaxWeightPerPessenger = MaxWeightPerPessenger;
+            newBout.NumberOfSeats = NumberOfSeats;
             _context.Bouts.Add(newBout);
             _context.SaveChanges();
             return Task.FromResult(newBout);
