@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "Bout-2/1.0.0": {
         "dependencies": {
+          "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "6.0.4",
           "Microsoft.EntityFrameworkCore": "6.0.4",
           "Microsoft.EntityFrameworkCore.Design": "6.0.4",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.4",
@@ -23,6 +24,17 @@
           "lib/netstandard2.0/Humanizer.dll": {
             "assemblyVersion": "2.8.0.0",
             "fileVersion": "2.8.26.1919"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore/6.0.4": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Relational": "6.0.4"
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll": {
+            "assemblyVersion": "6.0.4.0",
+            "fileVersion": "6.0.422.17204"
           }
         }
       },
@@ -496,6 +508,13 @@
       "sha512": "sha512-OiKusGL20vby4uDEswj2IgkdchC1yQ6rwbIkZDVBPIR6al2b7n3pC91elBul9q33KaBgRKhbZH3+2Ur4fnWx2A==",
       "path": "humanizer.core/2.8.26",
       "hashPath": "humanizer.core.2.8.26.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore/6.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mBOx8W+lrM5Sx09dczoEu4L2PB12pibpWFxyZ9x4FLHthqgJZJvFeEyQqqK1oWRcMKuXUMJOYKaKkBqeNbH0eA==",
+      "path": "microsoft.aspnetcore.diagnostics.entityframeworkcore/6.0.4",
+      "hashPath": "microsoft.aspnetcore.diagnostics.entityframeworkcore.6.0.4.nupkg.sha512"
     },
     "Microsoft.CSharp/4.5.0": {
       "type": "package",

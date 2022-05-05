@@ -130,3 +130,4 @@ C:\Users\Lasha\source\repos\Bout\obj\Debug\net6.0\refint\Bout-2.dll
 C:\Users\Lasha\source\repos\Bout\obj\Debug\net6.0\Bout-2.pdb
 C:\Users\Lasha\source\repos\Bout\obj\Debug\net6.0\Bout-2.genruntimeconfig.cache
 C:\Users\Lasha\source\repos\Bout\obj\Debug\net6.0\ref\Bout-2.dll
+C:\Users\Lasha\source\repos\Bout\bin\Debug\net6.0\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll

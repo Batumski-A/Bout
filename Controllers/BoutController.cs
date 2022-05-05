@@ -29,7 +29,7 @@ namespace Bout_2.Controllers
             newBout.MaxWeightPerPessenger = MaxWeightPerPessenger;
             newBout.NumberOfSeats = NumberOfSeats;
             _context.Bouts.Add(newBout);
-/*            _context.SaveChanges();*/
+            _context.SaveChanges();
             return Task.FromResult(newBout);
         }
 
