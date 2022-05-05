@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3saMsLRXL63nQfd156rzIErU7xLv49iHwU86T0WgoeAlgyNDOInlaLEGut4zCKgcNKAPbYueqPsiNyqGJr7m8A==",
+  "dgSpecHash": "sjXDhfqHYlmOP9woEsaImLbieDEAkvLXnC+NJPqwD2lNA2GSpIWSXnWvcOuC9YVTw0fermpD3+/U/3lLlxd+ng==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lasha\\OneDrive\\Desktop\\github\\bout\\Bout-2.csproj",
+  "projectFilePath": "C:\\Users\\Lasha\\source\\repos\\Bout\\Bout-2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lasha\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Lasha\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
