@@ -13,11 +13,18 @@ namespace Bout_2.Controllers
         {
             _context = context;
         }
-        [HttpGet]
+        [HttpGet("/Persons")]
         public Task<List<Person>> People()
         {
-            List<Person> persons = _context.person.ToList();
+            List<Person> persons = _context.Persons.ToList();
             return Task.FromResult(persons);
         }
+        [HttpGet("/Bout")]
+        public Task<List<Bout>> Bouts()
+        {
+            List<Bout> bouts = _context.Bouts.ToList();
+            return Task.FromResult(bouts);
+        }
+        
     }
 }

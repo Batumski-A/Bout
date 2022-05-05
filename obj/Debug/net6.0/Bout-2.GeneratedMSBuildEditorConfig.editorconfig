@@ -8,11 +8,11 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Bout_2
 build_property.RootNamespace = Bout_2
-build_property.ProjectDir = C:\Users\Lasha\Source\Repos\Bout\
+build_property.ProjectDir = C:\Users\Lasha\source\repos\Bout\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Lasha\Source\Repos\Bout
+build_property.MSBuildProjectDirectory = C:\Users\Lasha\source\repos\Bout
 build_property._RazorSourceGeneratorDebug = 
 
 [C:/Users/Lasha/source/repos/Bout/Pages/Error.cshtml]
