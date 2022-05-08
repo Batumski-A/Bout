@@ -13,8 +13,5 @@ namespace Bout_2.Models
         public double Weight { get; set; }
         public bool Vaccinated { get; set; }
         public int BoutId { get; set; }
-
-
-
     }
 }
