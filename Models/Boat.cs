@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Bout_2.Models
+namespace Boat_2.Models
 {
-    public class Bout
+    public class Boat
     {
         [Key]
         public int Id { get; set; }

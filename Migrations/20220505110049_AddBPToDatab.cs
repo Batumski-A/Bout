@@ -2,14 +2,14 @@
 
 #nullable disable
 
-namespace Bout_2.Migrations
+namespace Boat_2.Migrations
 {
     public partial class AddBPToDatab : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Bouts",
+                name: "Boats",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -23,7 +23,7 @@ namespace Bout_2.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Bouts", x => x.Id);
+                    table.PrimaryKey("PK_Boats", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -36,7 +36,7 @@ namespace Bout_2.Migrations
                     Age = table.Column<int>(type: "int", maxLength: 3, nullable: false),
                     Weight = table.Column<double>(type: "float", nullable: false),
                     Vaccinated = table.Column<bool>(type: "bit", nullable: false),
-                    BoutId = table.Column<int>(type: "int", nullable: false)
+                    BoatId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -47,7 +47,7 @@ namespace Bout_2.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Bouts");
+                name: "Boats");
 
             migrationBuilder.DropTable(
                 name: "Persons");

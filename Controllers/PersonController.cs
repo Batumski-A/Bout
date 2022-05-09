@@ -1,8 +1,8 @@
-﻿using Bout_2.Data;
-using Bout_2.Models;
+﻿using Boat_2.Data;
+using Boat_2.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Bout_2.Controllers
+namespace Boat_2.Controllers
 {
     [Route("Person")]
     [ApiController]
@@ -16,7 +16,7 @@ namespace Bout_2.Controllers
         }
 
         [HttpPost]
-        public Task<Person> AddBout(string FullNam,int Age,double Weight,bool Vaccined)
+        public Task<Person> AddBoat(string FullNam,int Age,double Weight,bool Vaccined)
         {
             _person.FullName = FullNam;
             _person.Age = Age;

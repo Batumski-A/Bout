@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Bout_2.Models
+namespace Boat_2.Models
 {
     public class Person
     {
@@ -12,6 +12,6 @@ namespace Bout_2.Models
         public int Age { get; set; }
         public double Weight { get; set; }
         public bool Vaccinated { get; set; }
-        public int BoutId { get; set; }
+        public int BoatId { get; set; } = 0;
     }
 }

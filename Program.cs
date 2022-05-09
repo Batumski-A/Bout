@@ -1,4 +1,4 @@
-using Bout_2.Data;
+using Boat_2.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using System.Text.Json;
@@ -14,8 +14,8 @@ builder.Services.AddHsts(options =>
     options.Preload = true;
     options.IncludeSubDomains = true;
     options.MaxAge = TimeSpan.FromDays(60);
-    options.ExcludedHosts.Add("bout.azurewebsites.net");
-    options.ExcludedHosts.Add("https://bout.azurewebsites.net");
+    options.ExcludedHosts.Add("Boat.azurewebsites.net");
+    options.ExcludedHosts.Add("https://Boat.azurewebsites.net");
 });
 
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(
@@ -27,7 +27,7 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Bout", Version = "v1" });
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Boat", Version = "v1" });
     c.UseInlineDefinitionsForEnums();
 });
 

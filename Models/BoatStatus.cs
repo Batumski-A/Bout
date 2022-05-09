@@ -1,6 +1,6 @@
-﻿namespace Bout_2.Models
+﻿namespace Boat_2.Models
 {
-    public enum BoutStatus
+    public enum BoatStatus
     {
         Broke = 0,
         Available = 1,

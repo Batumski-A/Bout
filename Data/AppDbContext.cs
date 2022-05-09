@@ -1,7 +1,7 @@
-﻿using Bout_2.Models;
+﻿using Boat_2.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace Bout_2.Data
+namespace Boat_2.Data
 {
     public class AppDbContext : DbContext
     {
@@ -11,6 +11,6 @@ namespace Bout_2.Data
         {
         }
         public DbSet<Person> Persons { get; set; }
-        public DbSet<Bout> Bouts { get; set; }
+        public DbSet<Boat> Boats { get; set; }
     }
 }

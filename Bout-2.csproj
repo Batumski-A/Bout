@@ -4,7 +4,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <RootNamespace>Bout_2</RootNamespace>
+    <RootNamespace>Boat_2</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
