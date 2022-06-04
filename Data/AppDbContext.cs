@@ -1,4 +1,5 @@
-﻿using Boat_2.Models;
+﻿using Boat_2.Controllers;
+using Boat_2.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Boat_2.Data
@@ -12,5 +13,6 @@ namespace Boat_2.Data
         }
         public DbSet<Person> Persons { get; set; }
         public DbSet<Boat> Boats { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }

@@ -2,3 +2,9 @@
 
 # CS8600: Converting null literal or possible null value to non-nullable type.
 dotnet_diagnostic.CS8600.severity = none
+
+# IDE0011: Add braces
+csharp_prefer_braces = false
+
+# CS8601: Possible null reference assignment.
+dotnet_diagnostic.CS8601.severity = none

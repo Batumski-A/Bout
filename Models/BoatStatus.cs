@@ -2,8 +2,8 @@
 {
     public enum BoatStatus
     {
-        Broke = 0,
-        Available = 1,
-        NotAvailable = 2
+        Broke = 1,
+        Available = 2,
+        NotAvailable = 3
     }
 }

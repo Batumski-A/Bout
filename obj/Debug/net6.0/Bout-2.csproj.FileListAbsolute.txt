@@ -131,3 +131,17 @@ C:\Users\Lasha\source\repos\Bout\obj\Debug\net6.0\Bout-2.pdb
 C:\Users\Lasha\source\repos\Bout\obj\Debug\net6.0\Bout-2.genruntimeconfig.cache
 C:\Users\Lasha\source\repos\Bout\obj\Debug\net6.0\ref\Bout-2.dll
 C:\Users\Lasha\source\repos\Bout\bin\Debug\net6.0\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
+C:\Users\Lasha\source\repos\Bout\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Lasha\source\repos\Bout\bin\Debug\net6.0\Azure.Core.dll
+C:\Users\Lasha\source\repos\Bout\bin\Debug\net6.0\Azure.Identity.dll
+C:\Users\Lasha\source\repos\Bout\bin\Debug\net6.0\Azure.Security.KeyVault.Certificates.dll
+C:\Users\Lasha\source\repos\Bout\bin\Debug\net6.0\Azure.Security.KeyVault.Secrets.dll
+C:\Users\Lasha\source\repos\Bout\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
+C:\Users\Lasha\source\repos\Bout\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Lasha\source\repos\Bout\bin\Debug\net6.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\Lasha\source\repos\Bout\bin\Debug\net6.0\Microsoft.Identity.Web.dll
+C:\Users\Lasha\source\repos\Bout\bin\Debug\net6.0\Microsoft.Identity.Web.Certificate.dll
+C:\Users\Lasha\source\repos\Bout\bin\Debug\net6.0\Microsoft.Identity.Web.Certificateless.dll
+C:\Users\Lasha\source\repos\Bout\bin\Debug\net6.0\Microsoft.Identity.Web.TokenCache.dll
+C:\Users\Lasha\source\repos\Bout\bin\Debug\net6.0\Microsoft.IdentityModel.Validators.dll
+C:\Users\Lasha\source\repos\Bout\bin\Debug\net6.0\package-lock.json

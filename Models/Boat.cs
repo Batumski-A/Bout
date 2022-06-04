@@ -6,14 +6,15 @@ namespace Boat_2.Models
     {
         [Key]
         public int Id { get; set; }
-        [MaxLength(32)]
+        [StringLength(32)]
         public string Name { get; set; } = string.Empty;
-        [Required,MaxLength(32)]
-        public string? Status { get; set; }
-        public int NumberOfSeats { get; set; }
-        public double MaxWeightPerPessenger { get; set; }
-        public bool CovidVaccineNeed { get; set; }
+        [Required, MaxLength(32)]
+        public string Status { get; set; } = string.Empty;
+        public int CrewSeats { get; set; }
+        [Required, StringLength(16)]
+        public string QualificationNeed { get; set; } = string.Empty;
         [MaxLength(32)]
-        public string Pessengers { get; set; } = string.Empty;
+        public string Crews { get; set; } = string.Empty;
+        public DateTime StartingDateTime { get; set; } = DateTime.Now;
     }
 }

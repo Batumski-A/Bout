@@ -1,10 +1,11 @@
 ﻿using Boat_2.Data;
+using Boat_2.Helpers;
 using Boat_2.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Boat_2.Controllers
 {
-    [Route("Person")]
+    [Route("Api/Person")]
     [ApiController]
     public class PersonController : ControllerBase
     {
@@ -15,13 +16,21 @@ namespace Boat_2.Controllers
             _context = context;
         }
 
+        [HttpGet]
+        public Task<List<Person>> People()
+        {
+            List<Person> persons = _context.Persons.ToList();
+            return Task.FromResult(persons);
+        }
+
+
         [HttpPost]
-        public Task<Person> AddBoat(string FullNam,int Age,double Weight,bool Vaccined)
+        public Task<Person> AddPerson(string FullNam,int Age,List<PersonQualification> Qualification)
         {
             _person.FullName = FullNam;
             _person.Age = Age;
-            _person.Weight = Weight;
-            _person.Vaccinated = Vaccined;
+            string combinedString = string.Join(",", Qualification);
+            _person.Qualification = combinedString;
             _context.Persons.Add(_person);
             _context.SaveChanges();
             return Task.FromResult(_person);

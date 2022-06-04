@@ -1,10 +1,22 @@
+using Boat_2.Controllers;
 using Boat_2.Data;
+using Boat_2.Helpers;
+using Boat_2.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
+
+
+    // configure strongly typed settings object
+builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));
+
+    // configure DI for application services
+builder.Services.AddScoped<UserService, UserService>();
 
 // Add services to the container.
 builder.Services.AddRazorPages();
@@ -24,13 +36,48 @@ builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(c =>
+//Authentication
+/*builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer();
+*//*builder.Services.AddAuthorization(options =>
 {
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Boat", Version = "v1" });
+    options.FallbackPolicy = new AuthorizationPolicyBuilder()
+    .AddAuthenticationSchemes(JwtBearerDefaults.AuthenticationScheme)
+    .RequireAuthenticatedUser()
+    .Build();
+});*/
+
+
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen(c => {
+    c.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Title = "JWTToken_Auth_API",
+        Version = "v1"
+    });
     c.UseInlineDefinitionsForEnums();
+    c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
+    {
+        Name = "Authorization",
+        Type = SecuritySchemeType.ApiKey,
+        Scheme = "Bearer",
+        BearerFormat = "JWT",
+        In = ParameterLocation.Header,
+        Description = "JWT Authorization header using the Bearer scheme. \r\n\r\n Enter 'Bearer' [space] and then your token in the text input below.\r\n\r\nExample: \"Bearer 1safsfsdfdfd\"",
+    });
+    c.AddSecurityRequirement(new OpenApiSecurityRequirement {
+        {
+            new OpenApiSecurityScheme {
+                Reference = new OpenApiReference {
+                    Type = ReferenceType.SecurityScheme,
+                        Id = "Bearer"
+                }
+            },
+            new string[] {}
+        }
+    });
 });
 
+builder.Services.AddCors();
 builder.Services.AddControllers()
     .AddJsonOptions(options =>
     {
@@ -40,13 +87,23 @@ builder.Services.AddControllers()
 
 var app = builder.Build();
 
+app.UseCors(x => x
+        .AllowAnyOrigin()
+        .AllowAnyMethod()
+        .AllowAnyHeader());
+app.UseMiddleware<JwtMiddleware>();
+app.MapControllers();
+
+/*app.UseAuthentication();
+app.UseAuthorization();
+*/
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
 
     var context = services.GetRequiredService<AppDbContext>();
-    context.Database.EnsureCreated();
-    //DbInitializer.Initialize(context);
+/*    context.Database.EnsureCreated();
+*/    //DbInitializer.Initialize(context);
 }
 
 
