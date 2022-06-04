@@ -17,6 +17,7 @@ namespace Boat_2.Controllers
             _context = context;
             _userService = userService;
         }
+
         [HttpPost("authenticate")]
         public IActionResult Authenticate(AuthenticateRequest model)
         {
